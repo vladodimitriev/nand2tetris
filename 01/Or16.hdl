@@ -1,0 +1,16 @@
+// Created by vladodimitriev
+
+/**
+ * 16-bit bitwise Or:
+ * for i = 0..15 out[i] = (a[i] or b[i])
+ */
+
+CHIP Or16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    Nand16(a = a, b = a, out = out1);
+    Nand16(a = b, b = b, out = out2);
+    Nand16(a = out1, b = out2, out = out);
+}

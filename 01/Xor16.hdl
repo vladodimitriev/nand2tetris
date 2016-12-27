@@ -1,0 +1,17 @@
+// Created by vladodimitriev
+
+/**
+ * Exclusive-or gate:
+ * out = not (a == b)
+ */
+
+CHIP Xor16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    Nand16(a = a, b = b, out = c);
+    Nand16(a = a, b = c, out = d1);
+    Nand16(a = b, b = c, out = d2);
+    Nand16(a = d1, b = d2, out = out);
+}
