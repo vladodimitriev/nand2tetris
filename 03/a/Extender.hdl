@@ -1,3 +1,5 @@
+// Created by vladodimitriev
+
 CHIP Extender {
     IN in;
     OUT out[16], notOut[16];

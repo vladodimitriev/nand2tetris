@@ -1,7 +1,4 @@
-// This file is part of www.nand2tetris.org
-// and the book "The Elements of Computing Systems"
-// by Nisan and Schocken, MIT Press.
-// File name: projects/02/Inc16.hdl
+// Created by vladodimitriev
 
 /**
  * 16-bit incrementer:
@@ -13,7 +10,6 @@ CHIP Inc16 {
     OUT out[16];
 
     PARTS:
-    // Put you code here:
     HalfAdder(a = in[0], b = true, sum = out[0], carry = carry0);
     FullAdder(a = in[1], b = false, c = carry0, sum = out[1], carry = carry1);
     FullAdder(a = in[2], b = false, c = carry1, sum = out[2], carry = carry2);

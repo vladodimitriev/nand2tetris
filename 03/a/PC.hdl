@@ -1,7 +1,4 @@
-// This file is part of www.nand2tetris.org
-// and the book "The Elements of Computing Systems"
-// by Nisan and Schocken, MIT Press.
-// File name: projects/03/a/PC.hdl
+// Created by vladodimitriev
 
 /**
  * A 16-bit counter with load and reset control bits.
@@ -16,8 +13,6 @@ CHIP PC {
     OUT out[16];
 
     PARTS:
-    // Put your code here:   
-    
     Inc16(in = out1, out = out3);
     Mux16(a = out1, b = out3, sel = inc, out = out4);
     Mux16(a = out4, b = in, sel = load, out = out6);
