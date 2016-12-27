@@ -10,7 +10,6 @@ CHIP Nand16Sel {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
     Nand(a = a[0], b = b, out = out[0]);
     Nand(a = a[1], b = b, out = out[1]);
     Nand(a = a[2], b = b, out = out[2]);
