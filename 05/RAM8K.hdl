@@ -1,0 +1,18 @@
+// Author: Vlado Dimitriev
+
+
+/**
+ * Helper chip for memory.
+ */
+
+CHIP RAM8K {
+    IN in[16], load, address[13];
+    OUT out[16];
+
+    PARTS:
+    DMux(in = load, sel = address[0], a = out1, b = out2);  
+    Mux16(a = outa, b = outb, sel = address[0], out = out);
+
+    RAM4K(in = in, load = out1, address = address[1..12], out = outa);  
+    RAM4K(in = in, load = out2, address = address[1..12], out = outb);  
+}
